@@ -1,0 +1,14 @@
+<div>
+  <p *ngFor="let item of itemsList">
+    {{item}}
+  </p>
+</div>
+
+<mat-card *ngFor="let item of itemsList">
+  <mat-card-content>
+    <p>Title: {{item.title}}</p>
+    <p>Description: {{item.description}} </p>
+    <p>Price: {{item.price}} </p>
+    <p>ImageUrl: {{item.imageUrl}} </p>
+  </mat-card-content>
+</mat-card>

@@ -5,6 +5,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule} from "@angular/forms";
+import {ItemService} from "../item.service";
 
 @Component({
   selector: 'app-add-edit-item', // il folosim pentru a apela componenta de angular: <app-add-edit-item/>
@@ -22,15 +23,31 @@ export class AddEditItemComponent {
   title:string = '';
   description:string = '';
   price:number = 0;
-  imgUrl:string = '';
+  imageUrl:string = '';
 
+  constructor(private itemService: ItemService) {
 
+  }
 
   showValue () {
       console.log(this.title);
       console.log(this.description);
       console.log(this.price);
-      console.log(this.imgUrl);
+      console.log(this.imageUrl);
+
+      let item = {
+        title : this.title,
+        description: this.description,
+        price: this.price,
+        imageUrl: this.imageUrl
+      };
+
+      this.itemService.createItem(item);
+      // this.itemService.displayInfo();
+  }
+
+  readItems(){
+    this.itemService.readItems();
   }
 
 }
