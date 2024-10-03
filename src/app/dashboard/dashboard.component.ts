@@ -14,4 +14,15 @@ import {ListItemsComponent} from "../list-items/list-items.component";
 })
 export class DashboardComponent {
 
+  itemDashboard: any;
+
+  constructor() {
+
+  }
+
+
+  onReceiveItem(itemParam: any){
+    console.log("Dashobrd componente - onReceiveItem()", itemParam);
+    this.itemDashboard = itemParam;
+  }
 }

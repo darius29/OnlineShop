@@ -47,8 +47,11 @@
 
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button (click)="showValue()">Add item!</button>
-    <button mat-button (click)="readItems()">Read item!</button>
+    <button mat-button (click)="submitForm()">
+      {{
+      item == null ? 'Add item' : 'Edit item'
+      }}
+    </button>
   </mat-card-actions>
 </mat-card>
 

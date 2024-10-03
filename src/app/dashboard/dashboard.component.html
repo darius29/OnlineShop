@@ -1,4 +1,8 @@
 <p>Dashboard works!</p>
-<app-add-edit-item/>
-<app-list-items/>
+<!-- item este o proprietate / atribut pt componenta add-edit-item-->
+<!-- atunci cand un atribut / proprietate primeste ca valoare o variabila atributul se pune intre paranteze drepte-->
+<!-- atunci cand un atribut / proprietate primeste ca valoare un text (padding: 10px) nu se va schimba, nu putem pune paranteze -->
+<app-add-edit-item [item] = "itemDashboard" style="padding-top: 50px"/>
+
+<app-list-items (onEditEvent)="onReceiveItem($event)"/>
 
