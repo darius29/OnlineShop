@@ -5,7 +5,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule} from "@angular/forms";
-import {ItemService} from "../item.service";
+import {ItemService} from "../services/item.service";
 
 @Component({
   selector: 'app-add-edit-item', // il folosim pentru a apela componenta de angular: <app-add-edit-item/>
